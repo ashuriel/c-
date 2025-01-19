@@ -1,0 +1,56 @@
+using System;
+
+namespace C_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa un número entero de dos dígitos:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            
+            if (numero < -99 || numero > 99 || (numero > -10 && numero < 10))
+            {
+                Console.WriteLine("El número ingresado no tiene dos dígitos.");
+            }
+            else
+            {
+                // negativo
+                if (numero < 0)
+                {
+                    Console.WriteLine("El número es negativo.");
+                }
+                else
+                {
+                    Console.WriteLine("El número no es negativo.");
+                }
+
+              // primo
+                if (EsPrimo(Math.Abs(numero))) 
+                {
+                    Console.WriteLine("El número es primo.");
+                }
+                else
+                {
+                    Console.WriteLine("El número no es primo.");
+                }
+            }
+        }
+
+        // condicione para num primo
+        static bool EsPrimo(int numero)
+        {
+            if (numero < 2)
+                return false;
+
+            for (int i = 2; i < numero; i++)
+            {
+                if (numero % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+    }
+}
