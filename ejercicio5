@@ -1,0 +1,44 @@
+using System;
+
+namespace C_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa un número entero de tres dígitos:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            if (!EsTresDigitos(numero))
+            {
+                Console.WriteLine("El número debe ser un entero de tres dígitos.");
+            }
+            else
+            {
+                 evitar problemas con los signos
+                int unidad = Math.Abs(numero) % 10;       
+                int decena = (Math.Abs(numero) / 10) % 10; 
+                int centena = Math.Abs(numero) / 100;     
+
+               
+                if (centena >= decena && centena >= unidad)
+                {
+                    Console.WriteLine("El dígito mayor es " + centena + " y está en la posición de las centenas.");
+                }
+                else if (decena >= centena && decena >= unidad)
+                {
+                    Console.WriteLine("El dígito mayor es " + decena + " y está en la posición de las decenas.");
+                }
+                else
+                {
+                    Console.WriteLine("El dígito mayor es " + unidad + " y está en la posición de las unidades.");
+                }
+            }
+        }
+
+        static bool EsTresDigitos(int numero)
+        {
+            return (numero >= 100 && numero <= 999) || (numero <= -100 && numero >= -999);
+        }
+    }
+}
