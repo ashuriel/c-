@@ -1,5 +1,5 @@
 using System;
-
+//Leer un número entero de dos dígitos y determinar si sus dos dígitos son primos.
 namespace C_Practice
 {
     class Program
