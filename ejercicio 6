@@ -1,0 +1,46 @@
+using System;
+
+namespace C_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa un número entero de tres dígitos:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            if (!EsTresDigitos(numero))
+            {
+                Console.WriteLine("El número debe ser un entero de tres dígitos.");
+            }
+            else
+            {
+                int unidad = Math.Abs(numero) % 10;       
+                int decena = (Math.Abs(numero) / 10) % 10; 
+                int centena = Math.Abs(numero) / 100;     
+
+                
+                if (EsMultiplo(centena, decena) || EsMultiplo(centena, unidad) || EsMultiplo(decena, unidad))
+                {
+                    Console.WriteLine("Al menos un dígito es múltiplo de otro.");
+                }
+                else
+                {
+                    Console.WriteLine("Ningún dígito es múltiplo de otro.");
+                }
+            }
+        }
+
+        static bool EsTresDigitos(int numero)
+        {
+            return (numero >= 100 && numero <= 999) || (numero <= -100 && numero >= -999);
+        }
+
+        static bool EsMultiplo(int a, int b)
+        {
+            
+            if (b == 0) return false;
+            return a % b == 0 || b % a == 0;
+        }
+    }
+}
