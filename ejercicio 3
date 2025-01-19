@@ -1,0 +1,53 @@
+using System;
+
+namespace C_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa un número entero de dos dígitos:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+         
+            if (numero < -99 || numero > 99 || (numero > -10 && numero < 10))
+            {
+                Console.WriteLine("El número ingresado no tiene dos dígitos.");
+            }
+            else
+            {
+                
+                numero = Math.Abs(numero);
+
+            
+                int unidad = numero % 10; // digito 1
+                int decena = numero / 10; // digito 2
+
+              
+                if (EsPrimo(decena) && EsPrimo(unidad))
+                {
+                    Console.WriteLine($"Ambos dígitos ({decena} y {unidad}) son primos.");
+                }
+                else
+                {
+                    Console.WriteLine($"No ambos dígitos ({decena} y {unidad}) son primos.");
+                }
+            }
+        }
+
+        
+        static bool EsPrimo(int numero)
+        {
+            if (numero < 2)
+                return false;
+
+            for (int i = 2; i < numero; i++)
+            {
+                if (numero % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+    }
+}
