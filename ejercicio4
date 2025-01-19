@@ -1,5 +1,5 @@
 using System;
-
+//Leer dos números enteros de dos dígitos y determinar si la suma de los dos números origina un número par.
 namespace C_Practice
 {
     class Program
