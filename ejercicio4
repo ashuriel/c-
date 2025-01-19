@@ -1,0 +1,43 @@
+using System;
+
+namespace C_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa el primer número entero de dos dígitos:");
+            int numero1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ingresa el segundo número entero de dos dígitos:");
+            int numero2 = Convert.ToInt32(Console.ReadLine());
+
+           
+            if (!EsDosDigitos(numero1) || !EsDosDigitos(numero2))
+            {
+                Console.WriteLine("Ambos números deben ser enteros de dos dígitos.");
+            }
+            else
+            {
+                
+                int suma = numero1 + numero2;
+
+                
+                if (suma % 2 == 0)
+                {
+                    Console.WriteLine($"La suma de los números ({numero1} + {numero2} = {suma}) es un número par.");
+                }
+                else
+                {
+                    Console.WriteLine($"La suma de los números ({numero1} + {numero2} = {suma}) es un número impar.");
+                }
+            }
+        }
+
+        
+        static bool EsDosDigitos(int numero)
+        {
+            return (numero >= 10 && numero <= 99) || (numero <= -10 && numero >= -99);
+        }
+    }
+}
