@@ -1,5 +1,5 @@
 using System;
-
+//Leer un número entero de tres dígitos y determinar en qué posición está el mayor dígito.
 namespace C_Practice
 {
     class Program
