@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int numero = 0;
+        Console.WriteLine("Ingresa un numero entero de dos digitos:");
+        numero = Convert.ToInt32(Console.ReadLine());
+
+        if (numero > 99)
+        {
+            Console.WriteLine("Tiene que ser de dos dígitos");
+        }
+        else if (numero < 10)
+        {
+            Console.WriteLine("Tiene que ser de dos dígitos");
+        }
+        else
+        {
+            int unidad = numero % 10;
+            int decena = numero / 10;
+            int suma = unidad + decena;
+            Console.WriteLine("La suma de sus dos dígitos es: " + suma);
+        }
+    }
+}
