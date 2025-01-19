@@ -1,5 +1,5 @@
 using System;
-
+//Leer un número entero de dos dígitos y determinar a cuánto es igual la suma de sus dígitos.
 class Program
 {
     static void Main(string[] args)
