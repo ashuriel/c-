@@ -1,0 +1,34 @@
+using System;
+// Leer un número entero de cuatro dígitos y determinar si el segundo dígito es igual al penúltimo.
+namespace C_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ingresa un número entero de cuatro dígitos:");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            if (numero < 1000 || numero > 9999)
+            {
+                Console.WriteLine("El número debe ser un entero de cuatro dígitos.");
+            }
+            else
+            {
+                
+                int segundoDigito = (numero / 100) % 10; // Segundo dígito
+                int penultimoDigito = (numero / 10) % 10; // Penúltimo dígito
+
+                
+                if (segundoDigito == penultimoDigito)
+                {
+                    Console.WriteLine("El segundo dígito es igual al penúltimo.");
+                }
+                else
+                {
+                    Console.WriteLine("El segundo dígito no es igual al penúltimo.");
+                }
+            }
+        }
+    }
+}
