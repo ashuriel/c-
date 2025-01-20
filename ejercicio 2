@@ -16,7 +16,7 @@ namespace C_Practice
             }
             else
             {
-                // negativo
+                
                 if (numero < 0)
                 {
                     Console.WriteLine("El número es negativo.");
@@ -26,7 +26,7 @@ namespace C_Practice
                     Console.WriteLine("El número no es negativo.");
                 }
 
-              // primo
+              
                 if (EsPrimo(Math.Abs(numero))) 
                 {
                     Console.WriteLine("El número es primo.");
@@ -38,7 +38,7 @@ namespace C_Practice
             }
         }
 
-        // condicione para num primo
+        
         static bool EsPrimo(int numero)
         {
             if (numero < 2)
