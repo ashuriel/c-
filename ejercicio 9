@@ -16,8 +16,8 @@ namespace C_Practice
             else
             {
                 
-                int segundoDigito = (numero / 100) % 10; // Segundo dígito
-                int penultimoDigito = (numero / 10) % 10; // Penúltimo dígito
+                int segundoDigito = (numero / 100) % 10; 
+                int penultimoDigito = (numero / 10) % 10; 
 
                 
                 if (segundoDigito == penultimoDigito)
