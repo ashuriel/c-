@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("Ingresa un numero entero de dos digitos:");
         numero = Convert.ToInt32(Console.ReadLine());
 
-        if (numero > 99)
+        if (numero > 99) //condicion
         {
             Console.WriteLine("Tiene que ser de dos dígitos");
         }
